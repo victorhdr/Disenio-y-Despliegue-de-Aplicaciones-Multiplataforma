@@ -1,0 +1,22 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": false,
+    "paths": {
+      "@/*": [
+        "./*"
+      ],
+      "@app/*": [
+        "./app/*" // nota: por claridad, añado alias "@app/*" para no usar 
+                  //       rutas relativas ../ al importar componentes dentro de
+                  //       la carpeta app. Así las importaciones son más cortas.
+      ]
+    }
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    ".expo/types/**/*.ts",
+    "expo-env.d.ts"
+  ]
+}
